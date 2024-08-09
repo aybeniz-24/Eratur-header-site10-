@@ -40,7 +40,7 @@ ul i{
 .sub-menu {
     display: none;
     opacity: 0;
-    transition: opacity 0.3s ease, max-height 0.3s ease; /* keçid əlavə edildi */
+    transition: opacity 0.3s ease, max-height 0.3s ease;
     max-height: 0; 
     overflow: hidden;
 }
