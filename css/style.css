@@ -26,6 +26,9 @@ nav {
     transition: right .8s;
 }
 ul li {
+    a{
+        color: #77428e;
+    }
     color: #77428e;
     text-align: center;
     text-transform: uppercase;
