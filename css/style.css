@@ -6,7 +6,7 @@ nav {
 #logodiv{
     width: 250px;
     height: 110px;
-    margin: 30px auto;
+    margin: auto;
     background: url('/img/logo\(purple\).png') center/cover;
 }
 #logodiv2{
