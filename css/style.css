@@ -20,7 +20,7 @@ nav {
     top: 0;
     right: -100%;
     width: 600px;
-    height: 100%;
+    height: 100vh;
     background-color: #fff;
     transition: right .8s;
 }
@@ -145,9 +145,12 @@ ul i{
 #bar3 {
     margin-top: 20px;
 }
+.navigation {
+    z-index: 1000; 
+}
 .navigation.active {
     right: 0;
-    height: 100%;
+    height: 100vh;
 }
 #logo.open{
     left: 300px;
