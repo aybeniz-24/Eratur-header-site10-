@@ -10,10 +10,7 @@ nav {
     background: url('/img/logo\(purple\).png') center/cover;
 }
 #logodiv2{
-    display: inline-block;
-    width: 250px;
-    height: 110px;
-    background: url('/img/logo\(white\).webp') center/cover;
+    display: none;
 }
 .navigation {
     position: fixed;
@@ -190,3 +187,105 @@ ul i{
 }
 
 
+
+
+/* 768px və daha böyük ekranlar */
+@media only screen and (min-width: 768px) {
+    nav{
+        background-color: transparent;
+        color: #fff;
+        top: 10px;
+    }
+    .navigation {
+        position: static; /* Ekranın yuxarısına yerləşdirmək üçün 'absolute' deyil, 'static' */
+        width: 100vw; /* Tam genişlik */
+        height: auto; /* Yüksəklik avtomatik */
+        display: flex; /* Məzmunu horizontal mərkəzləşdirir */
+        justify-content: center; /* Mərkəzləşdirir */
+        align-items: center; /* Şaquli mərkəzləşdirir */
+        transition: none; /* Təhlükəsizlik məqsədilə keçid effekti aradan qaldırılır */
+        z-index: 1000; /* Üst səviyyədə olmasını təmin edir */
+    }
+
+    /* Logo */
+    #logodiv {
+        display: none;
+    }
+
+    #logodiv2 {
+        width: 150px;
+        height: 70px;
+        margin: 22px 5px;
+        position: absolute;
+        display: inline-block;
+    }
+
+    .hamburger {
+        display: none; /* Desktop ekranlarda gizlədilir */
+    }
+
+    /* Menu */
+    #menuUl {
+        display: flex; /* Flexbox ilə üfüqi görünüş */
+        flex-direction: row; /* Yalnız üfüqi istiqamətdə görünüş */
+        justify-content: flex-end; 
+        align-items: center;/* Mərkəzləşdirir */
+        margin: 30px 0; /* Marginləri sıfırlayır */
+        padding: 0; /* Paddingləri sıfırlayır */
+        list-style: none; /* Liste nöqtələrini gizlədilir */
+        i{
+            display: none;
+        }
+        a{
+            color: #fff;
+            font-size: .8em;
+        }
+    }
+
+    ul li {
+        margin: 0 2px; /* Elementlər arasında boşluq */
+        font-size: 1.1em; /* Font ölçüsü */
+        text-align: center; /* Mətn mərkəzləşdirir */
+    }
+
+    ul a {
+        color: #77428e; /* Mətn rəngi */
+        text-decoration: none; /* Alt xətt olmadan */
+        display: block; /* Hər bir element üçün blok səviyyəsi */
+        padding: 10px 0; /* Padding əlavə edir */
+    }
+
+
+    .sub-menu.show {
+        display: block; /* Görünür */
+    }
+
+    /* Arrow */
+    .arrow {
+        transform: rotate(0deg); /* İkonun rotasiyası */
+    }
+
+    /* İkonlar və Dil Seçimləri */
+    #icon, #language {
+      display: none
+     }
+
+    #icon a, #language a {
+        width: 50px; /* İkon və dil linklərinin genişliyi */
+        height: 50px; /* İkon və dil linklərinin hündürlüyü */
+        font-size: 1.8em; /* İkonların font ölçüsü */
+    }
+
+    #btn {
+       display: none;
+    }
+
+    /* Slider */
+    #slider {
+        background-position: center center; /* Sliderin mərkəzləşdirilmiş görünüşü */
+    }
+
+    #slider::before {
+        display: block; /* Overlay görünür */
+    }
+}
