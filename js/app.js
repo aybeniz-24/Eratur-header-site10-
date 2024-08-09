@@ -30,8 +30,28 @@ function toggleMenu() {
 yenileSlider();
 
 
-
-
-
+document.querySelectorAll('.dropdownToggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        const subMenu = this.nextElementSibling;
+        const arrow = this.querySelector('.arrow');
+        
+        document.querySelectorAll('.sub-menu').forEach(function(menu) {
+            if (menu !== subMenu) {
+                menu.classList.remove('show');
+                menu.previousElementSibling.querySelector('.arrow').classList.remove('rotate');
+            }
+        });
+        
+        if (subMenu.classList.contains('show')) {
+            subMenu.classList.remove('show');
+            arrow.classList.remove('rotate');
+        } else {
+            subMenu.classList.add('show');
+            arrow.classList.add('rotate');
+        }
+    });
+});
 
 
